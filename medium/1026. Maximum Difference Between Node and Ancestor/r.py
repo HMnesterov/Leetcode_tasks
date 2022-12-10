@@ -14,8 +14,7 @@ class Solution:
             self.recursion_func(root.right, old[:])
 
     def maxAncestorDiff(self, root: Optional[TreeNode]) -> int:
-        print(self.container)
-
+       
         self.recursion_func(root, [])
 
         return max(self.container)
