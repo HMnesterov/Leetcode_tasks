@@ -39,3 +39,16 @@ class Solution:
 
         return min(self.values)
 
+
+"""TESTS:
+1)Runtime 154 ms
+Beats 86.46%
+Memory 14.7 MB
+Beats 64.34%
+
+2)Runtime 151 ms
+Beats 87.51%
+Memory 14.7 MB
+Beats 64.34%
+
+"""
