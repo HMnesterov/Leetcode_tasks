@@ -3,17 +3,17 @@ class Solution:
         num.sort()
         result = num[0] + num[1] + num[2]
         for i in range(len(num) - 2):
-            j, k = i + 1, len(num) - 1
-            while j < k:
-                sum = num[i] + num[j] + num[k]
-                if sum == target:
-                    return sum
-                if abs(sum - target) < abs(result - target):
-                    result = sum
-                if sum < target:
-                    j += 1
-                elif sum > target:
-                    k -= 1
+            l, r = i + 1, len(num) - 1
+            while l < r:
+                summa = num[i] + num[l] + num[r]
+                if summa == target:
+                    return summa
+                if abs(summa - target) < abs(result - target):
+                    result = summa
+                if summa < target:
+                    l += 1
+                elif summa > target:
+                    r -= 1
         return result
 
 
