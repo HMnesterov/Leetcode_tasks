@@ -3,11 +3,11 @@ from typing import List
 
 class Solution:
     def permuteUnique(self, nums: List[int]) -> List[List[int]]:
-        guy = []
+        guy = set()
 
         def rec(st, lst):
             if not lst:
-                guy.append(st)
+                guy.add(tuple(st))
                 return
             for c in lst:
                 fake_st = st[:]
@@ -17,7 +17,10 @@ class Solution:
                 rec(fake_st, fake_lst)
 
         rec([], nums)
-        return list(set(map(tuple, guy)))
+        return guy
 
-sol = Solution()
-print(sol.permuteUnique([1,1,2]))
+"""TESTS:
+1)Runtime 256 ms
+Beats 26.41%
+Memory 14.5 MB
+Beats 26.16%"""
